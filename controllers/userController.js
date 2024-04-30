@@ -124,7 +124,9 @@ const loginUser = async(req,res)=> {
 
     const  getAllUser = async(req,res)=> {
         try {
+            console.log("inside getAllUSers")
             const connection = await db.connectDB();
+            console.log("after connection var")
             const query = `SELECT * FROM users`
            // const values = []
             const [row] = await connection.query(query);
